@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Card, Form, FormGroup, Label, Input } from "reactstrap";
-import axios from "axios";
 
 import "./LoginForm.css";
 
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
+    this.myRef = React.createRef();
     this.state = {
       email: "",
       password: "",
@@ -16,14 +16,6 @@ class LoginForm extends React.Component {
     // this.emailInputRef = React.createRef();
   }
 
-  // x = () => {
-  //   <div>
-  //     {this.state.persons.map(person => (
-  //       <div key={person.id}>{person.name} </div>
-  //     ))}
-  //     ;
-  //   </div>;
-  // };
   onEmailChange = e => {
     this.setState({ email: e.target.value });
   };
@@ -31,15 +23,25 @@ class LoginForm extends React.Component {
   onPasswordChange = e => {
     this.setState({ password: e.target.value });
   };
+  focusTextInput = () => {
+    // Explicitly focus the text input using the raw DOM API
+    // Note: we're accessing "current" to get the DOM node
+    this.myRef.current.focus();
+  };
+
+  componentDidMount = () => {
+    console.log(this.myRef);
+    this.myRef.current.focus();
+  };
 
   onSubmit = () => {
-    this.setState({ isLoading: true });
-    axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
-      const persons = response.data;
-      this.setState({
-        persons,
-        isLoading: false
-      });
+    // this.setState({ isLoading: true });
+    // axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
+    //   const persons = response.data;
+    this.setState({
+      // persons,
+      isLoading: false
+      // email: this.myRef.current.value
     });
   };
 
@@ -56,6 +58,7 @@ class LoginForm extends React.Component {
                 id="exampleEmail"
                 value={this.state.email}
                 onChange={this.onEmailChange}
+                innerRef={this.myRef}
               />
             </FormGroup>
             <FormGroup>
