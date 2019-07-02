@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "@emotion/core";
-// First way to import
 import { PacmanLoader } from "react-spinners";
 // Another way to import
 // import ClipLoader from "react-spinners/ClipLoader";
@@ -24,7 +23,7 @@ class Loading extends React.Component {
         <PacmanLoader
           css={override}
           sizeUnit={"px"}
-          size={25}
+          size={20}
           color={"#123abc"}
           loading={this.props.isLoading}
         />

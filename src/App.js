@@ -1,21 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
-import LoginForm from "./LoginPage/LoginForm";
-import MoreLogins from "./LoginPage/MoreLogins";
-import News from "./News/News";
+
+import Layout from "./News/Layout";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <>
         <div>
-          <News />
+          <Layout />
         </div>
-        <div>
-          <LoginForm />
-        </div>
-        <MoreLogins />
-      </div>
+      </>
     );
   }
 }

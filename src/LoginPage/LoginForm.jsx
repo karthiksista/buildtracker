@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card, Form, FormGroup, Label, Input } from "reactstrap";
 
 import "./LoginForm.css";
+import Layout from "../News/Layout";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class LoginForm extends React.Component {
       email: "",
       password: "",
       persons: [],
-      isLoading: false
+      show: false
     };
     // this.emailInputRef = React.createRef();
   }
@@ -35,14 +36,7 @@ class LoginForm extends React.Component {
   };
 
   onSubmit = () => {
-    // this.setState({ isLoading: true });
-    // axios.get("https://jsonplaceholder.typicode.com/users").then(response => {
-    //   const persons = response.data;
-    this.setState({
-      // persons,
-      isLoading: false
-      // email: this.myRef.current.value
-    });
+    this.setState({ show: true });
   };
 
   render() {
@@ -75,8 +69,8 @@ class LoginForm extends React.Component {
               Submit
             </Button>
           </Form>
-          {this.state.isLoading ? this.state.persons : ""}
         </Card>
+        {<div>{this.state.show ? <Layout /> : "Meh!!! Fix me :/"}</div>}
       </div>
     );
   }
