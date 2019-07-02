@@ -22,14 +22,18 @@ class TweetCard extends React.Component {
                   className="col-sm"
                   style={{ position: "absolute", left: "71px" }}
                 >
-                  authorauthorauthorauthodscfdas
+                  Karthik Sista
                 </div>
                 <div className="col-sm" style={{ left: "50px" }}>
-                  dcfd
+                  <img
+                    src="https://pbs.twimg.com/profile_images/1008726624320118784/rKY9KsBd_normal.jpg"
+                    alt="Beardy McBeardFace"
+                    style={{ width: "1.25em" }}
+                  />
                 </div>
               </div>
               <div className="col-sm" style={{ left: "42px", top: "-22px" }}>
-                Handle
+                @karthiksista{" "}
               </div>
             </div>
             <div className="container content">

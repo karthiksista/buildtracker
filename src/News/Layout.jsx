@@ -17,8 +17,8 @@ import TweetCard from "../TwitterCard/TweetCard";
 
 const routes = [
   { title: "World Headlines", path: "#world-headlines" },
-  { title: "Information", path: "#information" },
-  { title: "Status", path: "#status" }
+  { title: "Tweeet", path: "#Tweet" },
+  { title: "Context API", path: "#context" }``
 ];
 const breadcrumb = (
   <Breadcrumb>
@@ -52,12 +52,12 @@ export default class Layout extends Component {
                   <News />
                 </CardBody>
               </Card>
-              <Card>
+              <Card id="Tweet">
                 <TweetCard />
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle id="status">Status</CardTitle>
+                  <CardTitle id="context">Contex API Example</CardTitle>
                 </CardHeader>
                 <CardBody>
                   <Placeholder grid cols={2} rows={5} />
