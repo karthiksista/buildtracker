@@ -23,7 +23,7 @@ const routes = [
 const breadcrumb = (
   <Breadcrumb>
     <BreadcrumbItem>
-      <a href="/">Dashboard</a>
+      <a href="/">CheeseHeads</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
       <a href="/">News</a>
