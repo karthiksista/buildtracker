@@ -13,6 +13,7 @@ import {
 import "@cwds/core/scss/styles.scss";
 import News from "./News";
 import TweetCard from "../TwitterCard/TweetCard";
+import ProgressExample from "../Progress/ProgressExample";
 
 const routes = [
   { title: "World Headlines", path: "#world-headlines" },
@@ -52,6 +53,12 @@ export default class Layout extends Component {
               </Card>
               <Card id="Tweet">
                 <TweetCard />
+              </Card>
+              <Card>
+                {/* <CardTitle id="world-headlines">World Top Headlines</CardTitle> */}
+                <CardBody>
+                  <ProgressExample />
+                </CardBody>
               </Card>
             </div>
           }
