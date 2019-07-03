@@ -26,7 +26,7 @@ const breadcrumb = (
       <a href="/">CheeseHeads</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
-      <a href="/">News</a>
+      <a href="/">Concepts</a>
     </BreadcrumbItem>
   </Breadcrumb>
 );
