@@ -17,12 +17,7 @@ class TweetCard extends React.Component {
                   size="lg"
                 />
               </div>
-              <div
-                className="p2"
-                // style={{ position: "absolute", left: "71px" }}
-              >
-                Karthik Sista
-              </div>
+              <div className="p2">Karthik Sista</div>
               <div className="ml-auto p-2">
                 <img
                   src="https://pbs.twimg.com/profile_images/1008726624320118784/rKY9KsBd_normal.jpg"
