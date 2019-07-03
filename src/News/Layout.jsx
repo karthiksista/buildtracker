@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
   Page,
-  Placeholder,
   JumpNav
 } from "@cwds/components";
 import "@cwds/core/scss/styles.scss";
@@ -17,8 +16,7 @@ import TweetCard from "../TwitterCard/TweetCard";
 
 const routes = [
   { title: "World Headlines", path: "#world-headlines" },
-  { title: "Tweeet", path: "#Tweet" },
-  { title: "Context API", path: "#context" }
+  { title: "Tweeet", path: "#Tweet" }
 ];
 const breadcrumb = (
   <Breadcrumb>
@@ -54,14 +52,6 @@ export default class Layout extends Component {
               </Card>
               <Card id="Tweet">
                 <TweetCard />
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle id="context">Contex API Example</CardTitle>
-                </CardHeader>
-                <CardBody>
-                  <Placeholder grid cols={2} rows={5} />
-                </CardBody>
               </Card>
             </div>
           }
